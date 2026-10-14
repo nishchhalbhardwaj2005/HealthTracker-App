@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HealthTracker Dashboard</title>
+  <style>
+    :root { color-scheme: light; --ink: #172b4d; --muted: #5e6c84; --line: #dfe1e6; --surface: #ffffff; --bg: #f7f8fa; --accent: #0c7a6b; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, sans-serif; color: var(--ink); background: var(--bg); }
+    header { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 1rem clamp(1rem, 4vw, 2.5rem); background: var(--surface); border-bottom: 1px solid var(--line); }
+    .brand { font-weight: 750; font-size: 1.2rem; }
+    .badge { padding: .35rem .65rem; border-radius: 999px; color: var(--accent); background: #e3fcef; font-size: .85rem; font-weight: 650; }
+    main { width: min(1100px, 100%); margin: 0 auto; padding: 2rem clamp(1rem, 4vw, 2rem); }
+    .intro { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 1rem; margin-bottom: 1.5rem; }
+    h1 { margin: 0 0 .4rem; font-size: clamp(1.7rem, 4vw, 2.3rem); }
+    p { color: var(--muted); line-height: 1.5; }
+    .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
+    .card { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 1.25rem; box-shadow: 0 2px 8px #172b4d0a; }
+    .label { color: var(--muted); font-size: .9rem; }
+    .value { margin: .5rem 0; font-size: 2rem; font-weight: 750; }
+    .unit { font-size: .95rem; font-weight: 500; color: var(--muted); }
+    .section-title { margin: 2rem 0 1rem; font-size: 1.25rem; }
+    .empty { border: 1px dashed #b3bac5; border-radius: 12px; padding: 1.5rem; background: var(--surface); }
+    footer { padding: 1.5rem; text-align: center; color: var(--muted); font-size: .85rem; }
+    @media (max-width: 700px) { .grid { grid-template-columns: 1fr; } header { align-items: flex-start; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand" aria-label="HealthTracker home">♥ HealthTracker</div>
+    <span class="badge">Dashboard preview</span>
+  </header>
+  <main>
+    <section class="intro" aria-labelledby="welcome-heading">
+      <div>
+        <h1 id="welcome-heading">Your health overview</h1>
+        <p>Review your daily wellness metrics in one place.</p>
+      </div>
+      <span class="label">Sample data · Not connected to a health service</span>
+    </section>
+    <section class="grid" aria-label="Daily health metrics">
+      <article class="card">
+        <div class="label">Steps today</div>
+        <div class="value">6,240 <span class="unit">steps</span></div>
+        <p>Sample metric for dashboard layout.</p>
+      </article>
+      <article class="card">
+        <div class="label">Sleep last night</div>
+        <div class="value">7.5 <span class="unit">hours</span></div>
+        <p>Sample metric for dashboard layout.</p>
+      </article>
+      <article class="card">
+        <div class="label">Water today</div>
+        <div class="value">1.4 <span class="unit">litres</span></div>
+        <p>Sample metric for dashboard layout.</p>
+      </article>
+    </section>
+    <h2 class="section-title">Recent activity</h2>
+    <section class="empty" aria-label="Recent activity status">
+      <strong>No connected activity yet</strong>
+      <p>This starter page uses placeholder values. Data loading, authentication, accessibility review, and API integration still need implementation.</p>
+    </section>
+  </main>
+  <footer>HealthTracker App · Frontend starter · Jira story HA-18</footer>
+</body>
+</html>
